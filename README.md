@@ -90,3 +90,12 @@ Evaluated across 10 curated last-mile shipment scenarios (`SHP-001` through `SHP
    Set `OPENAI_API_KEY` (and `OPENAI_BASE_URL` if using a proxy) in your environment or Google Colab Secrets (`openai_api_key`).
 3. **Run the notebook:**
    Execute `Project_Full_Code_Notebook.ipynb` sequentially to build the vector index, compile the LangGraph workflow, run all 10 test scenarios, and generate the aggregated evaluation report.
+
+
+## Learning Outcomes
+
+* Architected a Multi-Agent Last-Mile Exception Handling System: Built an end-to-end LangGraph workflow combining deterministic log preprocessing, RAG policy retrieval (ChromaDB + HuggingFace embeddings), a Resolution Agent, a Critic validation loop, and a tier-aware Communication Agent to automate delivery exception triage.
+
+* Engineered Privacy & Policy Guardrails for Autonomous Operations: Implemented tool-level PII redaction, locker eligibility checks, and a hybrid deterministic + LLM escalation engine that achieved 100% tool call accuracy and 90% end-to-end task completion across multi-event shipment test scenarios.
+
+* Built a 5-Metric Evaluation & LLM-as-a-Judge Pipeline: Instrumented full agent trajectory logging and automated benchmarking across task completion, escalation accuracy (75%), tool call accuracy (100%), reasoning coherence (3.90/5.00), and latency (8.43s avg) with page-level playbook citations.
